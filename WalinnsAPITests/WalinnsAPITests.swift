@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import WalinnsAPI
 
 class WalinnsAPITests: XCTestCase {
     
