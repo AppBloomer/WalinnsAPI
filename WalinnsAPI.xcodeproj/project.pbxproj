@@ -10,14 +10,14 @@
 		7735D239203EA9D700E9EB05 /* WalinnsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7735D22F203EA9D700E9EB05 /* WalinnsAPI.framework */; };
 		7735D23E203EA9D700E9EB05 /* WalinnsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D23D203EA9D700E9EB05 /* WalinnsAPITests.swift */; };
 		7735D240203EA9D700E9EB05 /* WalinnsAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 7735D232203EA9D700E9EB05 /* WalinnsAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7735D24A203FC7BF00E9EB05 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D249203FC7BF00E9EB05 /* ApiClient.swift */; };
-		7735D24C203FC7D000E9EB05 /* WAConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D24B203FC7D000E9EB05 /* WAConstant.swift */; };
-		7735D253203FC7E200E9EB05 /* WALogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D24D203FC7E200E9EB05 /* WALogger.swift */; };
-		7735D254203FC7E200E9EB05 /* WAUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D24E203FC7E200E9EB05 /* WAUtils.swift */; };
-		7735D255203FC7E200E9EB05 /* ReachabilityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D24F203FC7E200E9EB05 /* ReachabilityType.swift */; };
-		7735D256203FC7E200E9EB05 /* WalinnsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D250203FC7E200E9EB05 /* WalinnsApi.swift */; };
-		7735D257203FC7E200E9EB05 /* WADeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D251203FC7E200E9EB05 /* WADeviceInfo.swift */; };
-		7735D258203FC7E200E9EB05 /* WAApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D252203FC7E200E9EB05 /* WAApiClient.swift */; };
+		7735D271203FCC1800E9EB05 /* WADeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D270203FCC1800E9EB05 /* WADeviceInfo.swift */; };
+		7735D273203FCC6900E9EB05 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D272203FCC6900E9EB05 /* ApiClient.swift */; };
+		7735D275203FCC8C00E9EB05 /* WalinnsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D274203FCC8C00E9EB05 /* WalinnsApi.swift */; };
+		7735D277203FCCB100E9EB05 /* WAUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D276203FCCB100E9EB05 /* WAUtils.swift */; };
+		7735D279203FCCDC00E9EB05 /* WAApiclient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D278203FCCDC00E9EB05 /* WAApiclient.swift */; };
+		7735D27B203FCD0E00E9EB05 /* WAConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D27A203FCD0E00E9EB05 /* WAConstant.swift */; };
+		7735D27D203FCDA400E9EB05 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D27C203FCDA400E9EB05 /* Logger.swift */; };
+		7735D27F203FCE9000E9EB05 /* ReachabilityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D27E203FCE9000E9EB05 /* ReachabilityType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,14 +37,14 @@
 		7735D238203EA9D700E9EB05 /* WalinnsAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalinnsAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7735D23D203EA9D700E9EB05 /* WalinnsAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalinnsAPITests.swift; sourceTree = "<group>"; };
 		7735D23F203EA9D700E9EB05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7735D249203FC7BF00E9EB05 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiClient.swift; path = ../../../swiftLib/WalinnsLib/ApiClient.swift; sourceTree = "<group>"; };
-		7735D24B203FC7D000E9EB05 /* WAConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WAConstant.swift; path = ../../../swiftLib/WalinnsLib/WAConstant.swift; sourceTree = "<group>"; };
-		7735D24D203FC7E200E9EB05 /* WALogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WALogger.swift; path = ../../../swiftLib/WalinnsLib/WALogger.swift; sourceTree = "<group>"; };
-		7735D24E203FC7E200E9EB05 /* WAUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WAUtils.swift; path = ../../../swiftLib/WalinnsLib/WAUtils.swift; sourceTree = "<group>"; };
-		7735D24F203FC7E200E9EB05 /* ReachabilityType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReachabilityType.swift; path = ../../../swiftLib/WalinnsLib/ReachabilityType.swift; sourceTree = "<group>"; };
-		7735D250203FC7E200E9EB05 /* WalinnsApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalinnsApi.swift; path = ../../../swiftLib/WalinnsLib/WalinnsApi.swift; sourceTree = "<group>"; };
-		7735D251203FC7E200E9EB05 /* WADeviceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WADeviceInfo.swift; path = ../../../swiftLib/WalinnsLib/WADeviceInfo.swift; sourceTree = "<group>"; };
-		7735D252203FC7E200E9EB05 /* WAApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WAApiClient.swift; path = ../../../swiftLib/WalinnsLib/WAApiClient.swift; sourceTree = "<group>"; };
+		7735D270203FCC1800E9EB05 /* WADeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WADeviceInfo.swift; sourceTree = "<group>"; };
+		7735D272203FCC6900E9EB05 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		7735D274203FCC8C00E9EB05 /* WalinnsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalinnsApi.swift; sourceTree = "<group>"; };
+		7735D276203FCCB100E9EB05 /* WAUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAUtils.swift; sourceTree = "<group>"; };
+		7735D278203FCCDC00E9EB05 /* WAApiclient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAApiclient.swift; sourceTree = "<group>"; };
+		7735D27A203FCD0E00E9EB05 /* WAConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAConstant.swift; sourceTree = "<group>"; };
+		7735D27C203FCDA400E9EB05 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		7735D27E203FCE9000E9EB05 /* ReachabilityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,15 +88,15 @@
 			isa = PBXGroup;
 			children = (
 				7735D232203EA9D700E9EB05 /* WalinnsAPI.h */,
-				7735D251203FC7E200E9EB05 /* WADeviceInfo.swift */,
-				7735D24D203FC7E200E9EB05 /* WALogger.swift */,
-				7735D24F203FC7E200E9EB05 /* ReachabilityType.swift */,
-				7735D24E203FC7E200E9EB05 /* WAUtils.swift */,
-				7735D250203FC7E200E9EB05 /* WalinnsApi.swift */,
-				7735D252203FC7E200E9EB05 /* WAApiClient.swift */,
-				7735D24B203FC7D000E9EB05 /* WAConstant.swift */,
-				7735D249203FC7BF00E9EB05 /* ApiClient.swift */,
 				7735D233203EA9D700E9EB05 /* Info.plist */,
+				7735D270203FCC1800E9EB05 /* WADeviceInfo.swift */,
+				7735D272203FCC6900E9EB05 /* ApiClient.swift */,
+				7735D274203FCC8C00E9EB05 /* WalinnsApi.swift */,
+				7735D276203FCCB100E9EB05 /* WAUtils.swift */,
+				7735D278203FCCDC00E9EB05 /* WAApiclient.swift */,
+				7735D27A203FCD0E00E9EB05 /* WAConstant.swift */,
+				7735D27C203FCDA400E9EB05 /* Logger.swift */,
+				7735D27E203FCE9000E9EB05 /* ReachabilityType.swift */,
 			);
 			path = WalinnsAPI;
 			sourceTree = "<group>";
@@ -221,14 +221,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7735D24A203FC7BF00E9EB05 /* ApiClient.swift in Sources */,
-				7735D253203FC7E200E9EB05 /* WALogger.swift in Sources */,
-				7735D255203FC7E200E9EB05 /* ReachabilityType.swift in Sources */,
-				7735D24C203FC7D000E9EB05 /* WAConstant.swift in Sources */,
-				7735D258203FC7E200E9EB05 /* WAApiClient.swift in Sources */,
-				7735D254203FC7E200E9EB05 /* WAUtils.swift in Sources */,
-				7735D256203FC7E200E9EB05 /* WalinnsApi.swift in Sources */,
-				7735D257203FC7E200E9EB05 /* WADeviceInfo.swift in Sources */,
+				7735D275203FCC8C00E9EB05 /* WalinnsApi.swift in Sources */,
+				7735D277203FCCB100E9EB05 /* WAUtils.swift in Sources */,
+				7735D271203FCC1800E9EB05 /* WADeviceInfo.swift in Sources */,
+				7735D27B203FCD0E00E9EB05 /* WAConstant.swift in Sources */,
+				7735D27F203FCE9000E9EB05 /* ReachabilityType.swift in Sources */,
+				7735D27D203FCDA400E9EB05 /* Logger.swift in Sources */,
+				7735D279203FCCDC00E9EB05 /* WAApiclient.swift in Sources */,
+				7735D273203FCC6900E9EB05 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
