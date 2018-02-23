@@ -1,0 +1,11 @@
+framework module WalinnsAPI {
+  umbrella header "WalinnsAPI.h"
+
+  export *
+  module * { export * }
+}
+
+module WalinnsAPI.Swift {
+    header "WalinnsAPI-Swift.h"
+    requires objc
+}
