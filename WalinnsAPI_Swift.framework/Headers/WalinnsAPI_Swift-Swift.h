@@ -183,9 +183,9 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Wunknown-pragmas"
 #pragma clang diagnostic ignored "-Wnullability"
 
-SWIFT_MODULE_NAMESPACE_PUSH("WalinnsAPI")
+SWIFT_MODULE_NAMESPACE_PUSH("WalinnsAPI_Swift")
 
-SWIFT_CLASS("_TtC10WalinnsAPI10WalinnsApi")
+SWIFT_CLASS("_TtC16WalinnsAPI_Swift10WalinnsApi")
 @interface WalinnsApi : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end

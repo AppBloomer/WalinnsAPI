@@ -4,44 +4,33 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/WalinnsAPI-Swift.h</key>
-		<data>
-		xcG4B3r7kAYBlsl//Yg8nP3lGL4=
-		</data>
 		<key>Headers/WalinnsAPI.h</key>
 		<data>
 		+f3S4TgBos1U//Gy33T7ruNZGYU=
 		</data>
+		<key>Headers/WalinnsAPI_Swift-Swift.h</key>
+		<data>
+		gHp+WshXAukzexzODFrb4E1W+ik=
+		</data>
 		<key>Info.plist</key>
 		<data>
-		KN8qAZpRp7a48CVO8osQXcJh4TE=
+		nceAef3IxHDi+1CmgmQmTtsLJ/E=
 		</data>
-		<key>Modules/WalinnsAPI.swiftmodule/x86_64.swiftdoc</key>
+		<key>Modules/WalinnsAPI_Swift.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		pBplotB4d8Lj+T/TPPrYTHlXsUo=
+		j4sMQ9+RQsMQxntUKDuduQBa074=
 		</data>
-		<key>Modules/WalinnsAPI.swiftmodule/x86_64.swiftmodule</key>
+		<key>Modules/WalinnsAPI_Swift.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		8aIMCyY2nI0n2+1EFwhViPCJv5Y=
+		YE/Y29Y/VqWARGbxHUWgjAU+KhA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		BRGFoH3e886PnBEKgdVtjsl6Bo4=
+		Sy2G3sIMso18q/KmznZIlokWAig=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/WalinnsAPI-Swift.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			xcG4B3r7kAYBlsl//Yg8nP3lGL4=
-			</data>
-			<key>hash2</key>
-			<data>
-			d0n4fwWnmhBLRVNanVwFJ0EF8asnQYTIi+t/JgAiDKA=
-			</data>
-		</dict>
 		<key>Headers/WalinnsAPI.h</key>
 		<dict>
 			<key>hash</key>
@@ -53,37 +42,48 @@
 			Tn4DR8uSZxk7vek7t/BLHZZ/eCxnn2tMk35RhfqlwAA=
 			</data>
 		</dict>
-		<key>Modules/WalinnsAPI.swiftmodule/x86_64.swiftdoc</key>
+		<key>Headers/WalinnsAPI_Swift-Swift.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			pBplotB4d8Lj+T/TPPrYTHlXsUo=
+			gHp+WshXAukzexzODFrb4E1W+ik=
 			</data>
 			<key>hash2</key>
 			<data>
-			d+EntSdLz/sedw/2i30i/6a1RivVarIpnk+oBMJsn4Q=
+			J8k6ukjPzxOVFpaOCUzoGG9fcskhcnOVA53aZuDMoQE=
 			</data>
 		</dict>
-		<key>Modules/WalinnsAPI.swiftmodule/x86_64.swiftmodule</key>
+		<key>Modules/WalinnsAPI_Swift.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8aIMCyY2nI0n2+1EFwhViPCJv5Y=
+			j4sMQ9+RQsMQxntUKDuduQBa074=
 			</data>
 			<key>hash2</key>
 			<data>
-			S5mFtK1VGCQ/bhvLpP25PxV6ClhEB5CwRELAq44i4pA=
+			be2AjCY7/6UnHv0qQmWlak7zu5aRvHGpxtPN85iWsYk=
+			</data>
+		</dict>
+		<key>Modules/WalinnsAPI_Swift.swiftmodule/x86_64.swiftmodule</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			YE/Y29Y/VqWARGbxHUWgjAU+KhA=
+			</data>
+			<key>hash2</key>
+			<data>
+			z/S5UcGZPg3o8DXZHYOWH1UhYYEXFN8HSxbfPzOKMHU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BRGFoH3e886PnBEKgdVtjsl6Bo4=
+			Sy2G3sIMso18q/KmznZIlokWAig=
 			</data>
 			<key>hash2</key>
 			<data>
-			sWUzH0FT9c1dA7JFasrD88Ngi3DM8LJtJzgabfsngTo=
+			1B6rSFZCJc3McwJVcmfNIHIZuuZKlyJKdl5VQ33YzW4=
 			</data>
 		</dict>
 	</dict>
