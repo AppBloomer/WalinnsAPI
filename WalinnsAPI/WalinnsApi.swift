@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-public class WalinnsApi {
+public class WalinnsApi : NSObject {
     
     //sharedInstance
     static let sharedInstance = WalinnsApi()
@@ -23,15 +23,10 @@ public class WalinnsApi {
     
     public static func initialize(project_token : String)  {
         WAUtils.init().save_pref(key: "token", value:project_token)
-        
         NSSetUncaughtExceptionHandler { exception in
             print("EXCEPTION CAUGHT HERE....")
-            print("WalinnsTrackerClient error" , exception)
-            print("WalinnsTrackerClient reason",exception.callStackSymbols)
-            // CrashStatus(crash_reason: String(describing: exception))
+            //  CrashStatus(crash_reason: String(describing: exception))
         }
-        
-        
         sharedInstance.start()
         print("WlinnsTrackerClient" + project_token , self)
         NotificationCenter.default.addObserver(WalinnsApi.sharedInstance, selector: #selector(sharedInstance.appMovedToBackground), name: Notification.Name.UIApplicationWillResignActive, object: nil)
@@ -55,7 +50,7 @@ public class WalinnsApi {
     }
     
     
-    func start()  {
+    public func start()  {
         
         DispatchQueue.global(qos: .background).async {
             print("This is run on the background queue")
@@ -63,6 +58,7 @@ public class WalinnsApi {
             DispatchQueue.main.async {
                 print("WalinnsTrackerClient start time" , WalinnsApi.sharedInstance.profile)
                 let dummy : NSMutableDictionary = NSMutableDictionary()
+                dummy.setValue(nil, forKey: "email")
                 if(WAUtils.init().read_pref(key: "token") != nil ){
                     if(WalinnsApi.sharedInstance.profile != nil ){
                         WAApiclient.init(token: WAUtils.init().read_pref(key: "token")).DeviceReq(jsonobject: WalinnsApi.sharedInstance.profile!)
@@ -100,7 +96,7 @@ public class WalinnsApi {
     public static func sendProfile(user_profile : NSDictionary){
         print("Json object for userprofile ", user_profile)
         WalinnsApi.sharedInstance.profile = user_profile as! NSMutableDictionary
-        
+        sharedInstance.start()
     }
     
     public static func CrashStatus(crash_reason : String){

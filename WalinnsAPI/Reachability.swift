@@ -1,5 +1,5 @@
 //
-//  ReachabilityType.swift
+//  Reachability.swift
 //  WalinnsAPI
 //
 //  Created by Walinns Innovation on 23/02/18.
@@ -7,12 +7,12 @@
 //
 
 import Foundation
-import UIKit
 import SystemConfiguration
+
+import UIKit
 import SystemConfiguration.CaptiveNetwork
 
 public let ReachabilityStatusChangedNotification = "ReachabilityStatusChangedNotification"
-
 
 public enum ReachabilityType: CustomStringConvertible {
     case WWAN
@@ -95,3 +95,4 @@ extension ReachabilityStatus {
         }
     }
 }
+

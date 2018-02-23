@@ -27,6 +27,7 @@ class WAApiclient {
         self.project_token = token
         if(UserDefaults.standard.string(forKey: device_id) != nil){
             print("DEVICE ID second TIME: " , self.device_id , "old.." , UserDefaults.standard.string(forKey: device_id))
+            
         }else{
             UserDefaults.standard.set(self.device_id, forKey: "device_id")
             UserDefaults.standard.synchronize()
@@ -37,36 +38,36 @@ class WAApiclient {
     
     func DeviceReq(jsonobject : NSDictionary) {
         let jsonObjectt : NSMutableDictionary = NSMutableDictionary()
-        if(jsonobject != nil && jsonobject.value(forKey: "email") != nil){
+        if(jsonobject.value(forKey: "email") != nil  ){
             jsonObjectt.setValue(jsonobject.value(forKey: "gender"), forKey: "gender")
             jsonObjectt.setValue(jsonobject.value(forKey: "email"), forKey: "email")
             jsonObjectt.setValue(WAUtils.init().calcAge(birthday : jsonobject.value(forKey: "dob") as! String), forKey: "age")
             
         }else{
-            jsonObjectt.setValue("Male", forKey: "gender")
-            jsonObjectt.setValue(WADeviceInfo.init().email(), forKey: "email")
-            jsonObjectt.setValue(WADeviceInfo.init().age(), forKey: "age")
+            jsonObjectt.setValue("NA", forKey: "gender")
+            jsonObjectt.setValue("NA", forKey: "email")
+            jsonObjectt.setValue("NA", forKey: "age")
         }
-        
+ 
         
         jsonObjectt.setValue(device_id, forKey: "device_id")
-        jsonObjectt.setValue(WADeviceInfo.init().device_model(), forKey: "device_model")
-        jsonObjectt.setValue(WADeviceInfo.init().os_name(), forKey: "os_name")
-        jsonObjectt.setValue(WADeviceInfo.init().os_version(), forKey: "os_version")
-        jsonObjectt.setValue(WADeviceInfo.init().app_version(), forKey: "app_version")
-        jsonObjectt.setValue(WADeviceInfo.init().checkWiFi, forKey: "connectivity")
-        jsonObjectt.setValue(WADeviceInfo.init().carrierName(), forKey: "carrier")
-        jsonObjectt.setValue("false", forKey: "play_service")
-        jsonObjectt.setValue("false", forKey: "bluetooth")
-        jsonObjectt.setValue(WADeviceInfo.init().screendpi(), forKey: "screen_dpi")
-        jsonObjectt.setValue(WADeviceInfo.init().screenHeight(), forKey: "screen_height")
-        jsonObjectt.setValue(WADeviceInfo.init().screenWidth(), forKey: "screen_width")
-        jsonObjectt.setValue(WADeviceInfo.init().language(), forKey: "language")
-        jsonObjectt.setValue(WADeviceInfo.init().location(), forKey: "country")
-        jsonObjectt.setValue(WAUtils.init().getCurrentUtc(),forKey: "date_time")
+         jsonObjectt.setValue(WADeviceInfo.init().device_model(), forKey: "device_model")
+         jsonObjectt.setValue(WADeviceInfo.init().os_name(), forKey: "os_name")
+         jsonObjectt.setValue(WADeviceInfo.init().os_version(), forKey: "os_version")
+         jsonObjectt.setValue(WADeviceInfo.init().app_version(), forKey: "app_version")
+        jsonObjectt.setValue(WADeviceInfo.init().checkWiFi(), forKey: "connectivity")
+         jsonObjectt.setValue(WADeviceInfo.init().carrierName(), forKey: "carrier")
+         jsonObjectt.setValue("false", forKey: "play_service")
+         jsonObjectt.setValue("false", forKey: "bluetooth")
+         jsonObjectt.setValue(WADeviceInfo.init().screendpi(), forKey: "screen_dpi")
+         jsonObjectt.setValue(WADeviceInfo.init().screenHeight(), forKey: "screen_height")
+         jsonObjectt.setValue(WADeviceInfo.init().screenWidth(), forKey: "screen_width")
+         jsonObjectt.setValue(WADeviceInfo.init().language(), forKey: "language")
+         jsonObjectt.setValue(WADeviceInfo.init().location(), forKey: "country")
+         jsonObjectt.setValue(WAUtils.init().getCurrentUtc(),forKey: "date_time")
+         convertToJson(json_obj : jsonObjectt ,service_name : "devices" )
         print("WalinnsTrackerClient Device:", jsonObjectt )
-        convertToJson(json_obj : jsonObjectt ,service_name : "devices" )
-        
+
         
     }
     
@@ -93,16 +94,17 @@ class WAApiclient {
     func convertToJson(json_obj : NSMutableDictionary , service_name : String) {
         //print("JSON OBJEC" , jsonObject)
         let jsonData: NSData
-        
         do {
-            jsonData = try JSONSerialization.data(withJSONObject: json_obj, options: JSONSerialization.WritingOptions()) as NSData
-            let jsonString = NSString(data: jsonData as Data, encoding: String.Encoding.utf8.rawValue) as! String
+         jsonData = try JSONSerialization.data(withJSONObject: json_obj, options: JSONSerialization.WritingOptions.prettyPrinted) as NSData
+            let jsonString = NSString(data: jsonData as Data, encoding: String.Encoding.utf8.rawValue)! as String
             api_name(type_name: service_name , jsonstring:jsonString , flag: "na")
-            
+
+
         } catch _ {
             print ("JSON Failure")
-            
+
         }
+
     }
     func convertToJson(json_obj : NSMutableDictionary , service_name : String , flag_status : String) {
         //print("JSON OBJEC" , jsonObject)
@@ -110,7 +112,7 @@ class WAApiclient {
         
         do {
             jsonData = try JSONSerialization.data(withJSONObject: json_obj, options: JSONSerialization.WritingOptions()) as NSData
-            let jsonString = NSString(data: jsonData as Data, encoding: String.Encoding.utf8.rawValue) as! String
+            let jsonString = NSString(data: jsonData as Data, encoding: String.Encoding.utf8.rawValue)! as String
             api_name(type_name: service_name , jsonstring:jsonString , flag: flag_status)
             
         } catch _ {

@@ -17,7 +17,7 @@
 		7735D279203FCCDC00E9EB05 /* WAApiclient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D278203FCCDC00E9EB05 /* WAApiclient.swift */; };
 		7735D27B203FCD0E00E9EB05 /* WAConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D27A203FCD0E00E9EB05 /* WAConstant.swift */; };
 		7735D27D203FCDA400E9EB05 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D27C203FCDA400E9EB05 /* Logger.swift */; };
-		7735D27F203FCE9000E9EB05 /* ReachabilityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D27E203FCE9000E9EB05 /* ReachabilityType.swift */; };
+		7735D27F203FCE9000E9EB05 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D27E203FCE9000E9EB05 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +44,7 @@
 		7735D278203FCCDC00E9EB05 /* WAApiclient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAApiclient.swift; sourceTree = "<group>"; };
 		7735D27A203FCD0E00E9EB05 /* WAConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAConstant.swift; sourceTree = "<group>"; };
 		7735D27C203FCDA400E9EB05 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		7735D27E203FCE9000E9EB05 /* ReachabilityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityType.swift; sourceTree = "<group>"; };
+		7735D27E203FCE9000E9EB05 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +96,7 @@
 				7735D278203FCCDC00E9EB05 /* WAApiclient.swift */,
 				7735D27A203FCD0E00E9EB05 /* WAConstant.swift */,
 				7735D27C203FCDA400E9EB05 /* Logger.swift */,
-				7735D27E203FCE9000E9EB05 /* ReachabilityType.swift */,
+				7735D27E203FCE9000E9EB05 /* Reachability.swift */,
 			);
 			path = WalinnsAPI;
 			sourceTree = "<group>";
@@ -225,7 +225,7 @@
 				7735D277203FCCB100E9EB05 /* WAUtils.swift in Sources */,
 				7735D271203FCC1800E9EB05 /* WADeviceInfo.swift in Sources */,
 				7735D27B203FCD0E00E9EB05 /* WAConstant.swift in Sources */,
-				7735D27F203FCE9000E9EB05 /* ReachabilityType.swift in Sources */,
+				7735D27F203FCE9000E9EB05 /* Reachability.swift in Sources */,
 				7735D27D203FCDA400E9EB05 /* Logger.swift in Sources */,
 				7735D279203FCCDC00E9EB05 /* WAApiclient.swift in Sources */,
 				7735D273203FCC6900E9EB05 /* ApiClient.swift in Sources */,

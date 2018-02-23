@@ -28,16 +28,18 @@ class ApiClient : NSObject{
         return (singleton.sharedInstance)
     }
     
-    var url_base = "http://182.156.249.254:8083/"
+    var url_base = "http://ec2-18-218-53-112.us-east-2.compute.amazonaws.com:8080/"
     func postRequest (api: String,jsonString : String, parameters: [String: Any]? = nil) {
         
         guard let destination = URL(string: url_base + api) else { return }
+        print("project_url :",jsonString)
         var request = URLRequest(url: destination)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("qwertyuiop123", forHTTPHeaderField: "Authorization")
+        request.setValue(WAUtils.init().read_pref(key: "token"), forHTTPHeaderField: "Authorization")
         request.httpBody = jsonString.data(using: .utf8)
-        
+        request.timeoutInterval = 150
+        print("project_token :",WAUtils.init().read_pref(key: "token"))
         let session = URLSession.shared
         let task = session.dataTask(with: request) { (data, response, error) in
             if let data = data {
