@@ -76,18 +76,18 @@ public class WalinnsApi {
         
         
     }
-    public static func eventTrack(event_typ : String,event_nam : String){
+    public static func track(event_type : String,event_name : String){
         print("event_data_token:" , WAUtils.init().read_pref(key: "token"))
         if (WAUtils.init().read_pref(key: "device_status") != nil){
-            WAApiclient.init(token: WAUtils.init().read_pref(key: "token")).eventTrack(event_type : event_typ ,event_name: event_nam )
+            WAApiclient.init(token: WAUtils.init().read_pref(key: "token")).eventTrack(event_type : event_type ,event_name: event_name )
         }
         
     }
     
-    public static func ScreenTrack(screenName : String){
+    public static func track(screen_name : String){
         
         if (WAUtils.init().read_pref(key: "device_status") != nil){
-            WAApiclient.init(token: WAUtils.init().read_pref(key: "token")).screenTrack(screen_name : screenName)
+            WAApiclient.init(token: WAUtils.init().read_pref(key: "token")).screenTrack(screen_name : screen_name)
         }
         
     }
