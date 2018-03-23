@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 #
 
 s.name         = "WalinnsAPI-Swift"
-s.version      = "1.0.0"
+s.version      = "1.0.1"
 s.summary      = "Mobile App Ananlytics"
 
 # This description is used to generate tags and improve search results.
@@ -78,7 +78,7 @@ s.platform     = :ios, "8.0"
 #  Supports git, hg, bzr, svn and HTTP.
 #
 
-s.source       = { :git => "https://github.com/PrettyAndroid/WalinnsAPI.git", :tag => "1.0.0" }
+s.source       = { :git => "https://github.com/PrettyAndroid/WalinnsAPI.git", :tag => "1.0.1" }
 
 
 # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

@@ -11,7 +11,7 @@ import UIKit
 import CoreTelephony
 import CoreLocation
 import SystemConfiguration
-
+ 
 class WADeviceInfo {
     static let sharedInstance = WADeviceInfo()
     public var connectivty : String = ""
