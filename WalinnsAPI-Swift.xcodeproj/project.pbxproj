@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		770FDC342064DDE7005013C7 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770FDC332064DDE7005013C7 /* NotificationService.swift */; };
+		770FDC402064DEAA005013C7 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770FDC3F2064DEAA005013C7 /* UserNotifications.framework */; };
+		770FDC422064DEAA005013C7 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770FDC412064DEAA005013C7 /* UserNotificationsUI.framework */; };
+		770FDC452064DEAA005013C7 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770FDC442064DEAA005013C7 /* NotificationViewController.swift */; };
+		770FDC482064DEAA005013C7 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770FDC462064DEAA005013C7 /* MainInterface.storyboard */; };
 		7735D239203EA9D700E9EB05 /* WalinnsAPI_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7735D22F203EA9D700E9EB05 /* WalinnsAPI_Swift.framework */; };
 		7735D23E203EA9D700E9EB05 /* WalinnsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D23D203EA9D700E9EB05 /* WalinnsAPITests.swift */; };
 		7735D240203EA9D700E9EB05 /* WalinnsAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 7735D232203EA9D700E9EB05 /* WalinnsAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,6 +36,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		770FDC252064DD3E005013C7 /* WANotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WANotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		770FDC312064DDE7005013C7 /* WANotificationServices.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WANotificationServices.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		770FDC332064DDE7005013C7 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		770FDC352064DDE7005013C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		770FDC3D2064DEAA005013C7 /* WANotificationContent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WANotificationContent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		770FDC3F2064DEAA005013C7 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		770FDC412064DEAA005013C7 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		770FDC442064DEAA005013C7 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		770FDC472064DEAA005013C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		770FDC492064DEAA005013C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		770FDC4D2064DEE8005013C7 /* WANotificationServices.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WANotificationServices.entitlements; sourceTree = "<group>"; };
 		7735D22F203EA9D700E9EB05 /* WalinnsAPI_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WalinnsAPI_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7735D232203EA9D700E9EB05 /* WalinnsAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WalinnsAPI.h; sourceTree = "<group>"; };
 		7735D233203EA9D700E9EB05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +64,29 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		770FDC222064DD3E005013C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		770FDC2E2064DDE7005013C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		770FDC3A2064DEAA005013C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				770FDC422064DEAA005013C7 /* UserNotificationsUI.framework in Frameworks */,
+				770FDC402064DEAA005013C7 /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7735D22B203EA9D700E9EB05 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -66,11 +105,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		770FDC322064DDE7005013C7 /* WANotificationServices */ = {
+			isa = PBXGroup;
+			children = (
+				770FDC4D2064DEE8005013C7 /* WANotificationServices.entitlements */,
+				770FDC332064DDE7005013C7 /* NotificationService.swift */,
+				770FDC352064DDE7005013C7 /* Info.plist */,
+			);
+			path = WANotificationServices;
+			sourceTree = "<group>";
+		};
+		770FDC3E2064DEAA005013C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				770FDC3F2064DEAA005013C7 /* UserNotifications.framework */,
+				770FDC412064DEAA005013C7 /* UserNotificationsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		770FDC432064DEAA005013C7 /* WANotificationContent */ = {
+			isa = PBXGroup;
+			children = (
+				770FDC442064DEAA005013C7 /* NotificationViewController.swift */,
+				770FDC462064DEAA005013C7 /* MainInterface.storyboard */,
+				770FDC492064DEAA005013C7 /* Info.plist */,
+			);
+			path = WANotificationContent;
+			sourceTree = "<group>";
+		};
 		7735D225203EA9D700E9EB05 = {
 			isa = PBXGroup;
 			children = (
 				7735D231203EA9D700E9EB05 /* WalinnsAPI */,
 				7735D23C203EA9D700E9EB05 /* WalinnsAPITests */,
+				770FDC322064DDE7005013C7 /* WANotificationServices */,
+				770FDC432064DEAA005013C7 /* WANotificationContent */,
+				770FDC3E2064DEAA005013C7 /* Frameworks */,
 				7735D230203EA9D700E9EB05 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,6 +151,9 @@
 			children = (
 				7735D22F203EA9D700E9EB05 /* WalinnsAPI_Swift.framework */,
 				7735D238203EA9D700E9EB05 /* WalinnsAPI-SwiftTests.xctest */,
+				770FDC252064DD3E005013C7 /* WANotificationService.appex */,
+				770FDC312064DDE7005013C7 /* WANotificationServices.appex */,
+				770FDC3D2064DEAA005013C7 /* WANotificationContent.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,6 +198,57 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		770FDC242064DD3E005013C7 /* WANotificationService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 770FDC2C2064DD3E005013C7 /* Build configuration list for PBXNativeTarget "WANotificationService" */;
+			buildPhases = (
+				770FDC212064DD3E005013C7 /* Sources */,
+				770FDC222064DD3E005013C7 /* Frameworks */,
+				770FDC232064DD3E005013C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WANotificationService;
+			productName = WANotificationService;
+			productReference = 770FDC252064DD3E005013C7 /* WANotificationService.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		770FDC302064DDE7005013C7 /* WANotificationServices */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 770FDC362064DDE7005013C7 /* Build configuration list for PBXNativeTarget "WANotificationServices" */;
+			buildPhases = (
+				770FDC2D2064DDE7005013C7 /* Sources */,
+				770FDC2E2064DDE7005013C7 /* Frameworks */,
+				770FDC2F2064DDE7005013C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WANotificationServices;
+			productName = WANotificationServices;
+			productReference = 770FDC312064DDE7005013C7 /* WANotificationServices.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		770FDC3C2064DEAA005013C7 /* WANotificationContent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 770FDC4A2064DEAA005013C7 /* Build configuration list for PBXNativeTarget "WANotificationContent" */;
+			buildPhases = (
+				770FDC392064DEAA005013C7 /* Sources */,
+				770FDC3A2064DEAA005013C7 /* Frameworks */,
+				770FDC3B2064DEAA005013C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WANotificationContent;
+			productName = WANotificationContent;
+			productReference = 770FDC3D2064DEAA005013C7 /* WANotificationContent.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		7735D22E203EA9D700E9EB05 /* WalinnsAPI-Swift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7735D243203EA9D700E9EB05 /* Build configuration list for PBXNativeTarget "WalinnsAPI-Swift" */;
@@ -170,6 +295,28 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Walinns Innovation";
 				TargetAttributes = {
+					770FDC242064DD3E005013C7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
+					};
+					770FDC302064DDE7005013C7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					770FDC3C2064DEAA005013C7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					7735D22E203EA9D700E9EB05 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
@@ -187,6 +334,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 7735D225203EA9D700E9EB05;
 			productRefGroup = 7735D230203EA9D700E9EB05 /* Products */;
@@ -195,11 +343,36 @@
 			targets = (
 				7735D22E203EA9D700E9EB05 /* WalinnsAPI-Swift */,
 				7735D237203EA9D700E9EB05 /* WalinnsAPI-SwiftTests */,
+				770FDC242064DD3E005013C7 /* WANotificationService */,
+				770FDC302064DDE7005013C7 /* WANotificationServices */,
+				770FDC3C2064DEAA005013C7 /* WANotificationContent */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		770FDC232064DD3E005013C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		770FDC2F2064DDE7005013C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		770FDC3B2064DEAA005013C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				770FDC482064DEAA005013C7 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7735D22D203EA9D700E9EB05 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,6 +390,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		770FDC212064DD3E005013C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		770FDC2D2064DDE7005013C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				770FDC342064DDE7005013C7 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		770FDC392064DEAA005013C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				770FDC452064DEAA005013C7 /* NotificationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7735D22A203EA9D700E9EB05 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -250,7 +446,112 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		770FDC462064DEAA005013C7 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				770FDC472064DEAA005013C7 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		770FDC2A2064DD3E005013C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X83367U8R6;
+				INFOPLIST_FILE = WANotificationService/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.walinns.WANotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		770FDC2B2064DD3E005013C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X83367U8R6;
+				INFOPLIST_FILE = WANotificationService/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.walinns.WANotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		770FDC372064DDE7005013C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = WANotificationServices/WANotificationServices.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X83367U8R6;
+				INFOPLIST_FILE = WANotificationServices/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.walinns.WANotificationServices;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		770FDC382064DDE7005013C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = WANotificationServices/WANotificationServices.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X83367U8R6;
+				INFOPLIST_FILE = WANotificationServices/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.walinns.WANotificationServices;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		770FDC4B2064DEAA005013C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X83367U8R6;
+				INFOPLIST_FILE = WANotificationContent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.walinns.WANotificationContent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		770FDC4C2064DEAA005013C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X83367U8R6;
+				INFOPLIST_FILE = WANotificationContent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.walinns.WANotificationContent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		7735D241203EA9D700E9EB05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -438,6 +739,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		770FDC2C2064DD3E005013C7 /* Build configuration list for PBXNativeTarget "WANotificationService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				770FDC2A2064DD3E005013C7 /* Debug */,
+				770FDC2B2064DD3E005013C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		770FDC362064DDE7005013C7 /* Build configuration list for PBXNativeTarget "WANotificationServices" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				770FDC372064DDE7005013C7 /* Debug */,
+				770FDC382064DDE7005013C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		770FDC4A2064DEAA005013C7 /* Build configuration list for PBXNativeTarget "WANotificationContent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				770FDC4B2064DEAA005013C7 /* Debug */,
+				770FDC4C2064DEAA005013C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7735D229203EA9D700E9EB05 /* Build configuration list for PBXProject "WalinnsAPI-Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
