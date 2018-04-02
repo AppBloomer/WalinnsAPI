@@ -208,7 +208,7 @@ class WAApiclient {
         jsonObject.setValue(crash_reason, forKey: "reason")
         jsonObject.setValue(WAUtils.init().getCurrentUtc(), forKey: "date_time")
     }
-    func handleNotification(_ userInfo: [AnyHashable : Any]) -> DeeplinkType? {
+    func handlepush(_ userInfo: [AnyHashable : Any]) -> DeeplinkType? {
         print("image",userInfo)
         return nil
     }

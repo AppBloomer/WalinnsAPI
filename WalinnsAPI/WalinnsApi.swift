@@ -109,7 +109,7 @@ public class WalinnsApi : NSObject {
     
     public static func handleNotification(_ userInfo: [AnyHashable : Any]){
         
-        WAApiclient.init(token: WAUtils.init().read_pref(key: "token")).handleNotification(userInfo)
+        WAApiclient.init(token: WAUtils.init().read_pref(key: "token")).handlepush(userInfo)
     }
     
     
