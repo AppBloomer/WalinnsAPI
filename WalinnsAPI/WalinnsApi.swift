@@ -13,7 +13,7 @@ import CoreData
 public class WalinnsApi : NSObject {
     
     //sharedInstance
-    static let sharedInstance = WalinnsApi()
+    public static let sharedInstance = WalinnsApi()
  
     public var start_time = WAUtils.init().getCurrentUtc()
     public var end_time = "na"
@@ -107,8 +107,9 @@ public class WalinnsApi : NSObject {
         WAApiclient.init(token: WAUtils.init().read_pref(key: "token")).crashStatus(crash_reason: crash_reason)
     }
     
-    func handleNotification(_ userInfo: [AnyHashable : Any]) -> DeeplinkType? {
-        return nil
+    public static func handleNotification(_ userInfo: [AnyHashable : Any]){
+        
+        WAApiclient.init(token: WAUtils.init().read_pref(key: "token")).handleNotification(userInfo)
     }
     
     
