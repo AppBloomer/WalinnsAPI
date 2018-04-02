@@ -21,6 +21,9 @@ public class WalinnsApi : NSObject {
     public var profile : NSMutableDictionary? = nil
     public var exception_ : String = "na"
     
+    
+
+    
     public static func initialize(project_token : String)  {
         WAUtils.init().save_pref(key: "token", value:project_token)
         NSSetUncaughtExceptionHandler { exception in
@@ -103,6 +106,11 @@ public class WalinnsApi : NSObject {
         
         WAApiclient.init(token: WAUtils.init().read_pref(key: "token")).crashStatus(crash_reason: crash_reason)
     }
+    
+    func handleNotification(_ userInfo: [AnyHashable : Any]) -> DeeplinkType? {
+        return nil
+    }
+    
     
 }
 
