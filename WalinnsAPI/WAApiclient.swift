@@ -38,6 +38,8 @@ class WAApiclient {
     
     func DeviceReq(jsonobject : NSDictionary) {
         let jsonObjectt : NSMutableDictionary = NSMutableDictionary()
+        print("Location val inside:" , jsonobject)
+        print("Location val inside:" , jsonobject.value(forKey: "city"))
         if(jsonobject.value(forKey: "email") != nil  ){
             jsonObjectt.setValue(jsonobject.value(forKey: "gender"), forKey: "gender")
             jsonObjectt.setValue(jsonobject.value(forKey: "email"), forKey: "email")
@@ -48,14 +50,36 @@ class WAApiclient {
             jsonObjectt.setValue("NA", forKey: "email")
             jsonObjectt.setValue("NA", forKey: "age")
         }
- 
         
-        jsonObjectt.setValue(device_id, forKey: "device_id")
+        if(jsonobject.value(forKey: "city") != nil){
+            jsonObjectt.setValue(jsonobject.value(forKey: "city"), forKey: "city")
+        }else{
+            jsonObjectt.setValue("NA", forKey: "city")
+        }
+        if(jsonobject.value(forKey: "regionName") != nil){
+            jsonObjectt.setValue(jsonobject.value(forKey: "regionName"), forKey: "state")
+        }else{
+            jsonObjectt.setValue("NA", forKey: "state")
+        }
+        if(jsonobject.value(forKey: "countryCode") != nil){
+            jsonObjectt.setValue(jsonobject.value(forKey: "countryCode"), forKey: "country")
+        }else{
+            jsonObjectt.setValue(WADeviceInfo.init().location(), forKey: "country")
+        }
+        if(jsonobject.value(forKey: "name") != nil){
+            jsonObjectt.setValue(jsonobject.value(forKey: "name"), forKey: "First_name")
+            jsonobject.setValue("NA", forKey: "Last_name")
+        }else{
+            jsonObjectt.setValue("NA", forKey: "First_name")
+            jsonobject.setValue("NA", forKey: "Last_name")
+        }
+        
+         jsonObjectt.setValue(device_id, forKey: "device_id")
          jsonObjectt.setValue(WADeviceInfo.init().device_model(), forKey: "device_model")
          jsonObjectt.setValue(WADeviceInfo.init().os_name(), forKey: "os_name")
          jsonObjectt.setValue(WADeviceInfo.init().os_version(), forKey: "os_version")
          jsonObjectt.setValue(WADeviceInfo.init().app_version(), forKey: "app_version")
-        jsonObjectt.setValue(WADeviceInfo.init().checkWiFi(), forKey: "connectivity")
+         jsonObjectt.setValue(WADeviceInfo.init().checkWiFi(), forKey: "connectivity")
          jsonObjectt.setValue(WADeviceInfo.init().carrierName(), forKey: "carrier")
          jsonObjectt.setValue("false", forKey: "play_service")
          jsonObjectt.setValue("false", forKey: "bluetooth")
@@ -63,8 +87,8 @@ class WAApiclient {
          jsonObjectt.setValue(WADeviceInfo.init().screenHeight(), forKey: "screen_height")
          jsonObjectt.setValue(WADeviceInfo.init().screenWidth(), forKey: "screen_width")
          jsonObjectt.setValue(WADeviceInfo.init().language(), forKey: "language")
-         jsonObjectt.setValue(WADeviceInfo.init().location(), forKey: "country")
          jsonObjectt.setValue(WAUtils.init().getCurrentUtc(),forKey: "date_time")
+         jsonobject.setValue("1.0.0", forKey: "sdk_version")
          convertToJson(json_obj : jsonObjectt ,service_name : "devices" )
         print("WalinnsTrackerClient Device:", jsonObjectt )
 
@@ -208,9 +232,17 @@ class WAApiclient {
         jsonObject.setValue(crash_reason, forKey: "reason")
         jsonObject.setValue(WAUtils.init().getCurrentUtc(), forKey: "date_time")
     }
-    func handlepush(_ userInfo: [AnyHashable : Any]) -> DeeplinkType? {
-        print("image",userInfo)
-        return nil
+//    func handlepush(_ userInfo: [AnyHashable : Any]) -> DeeplinkType? {
+//        print("image",userInfo)
+//        if let data = userInfo["data"] as? [String: Any] {
+//            if let messageId = data["messageId"] as? String {
+//                return DeeplinkType.messages(.details(id: messageId))
+//            }
+//        }
+//        return nil
+//    }
+    class func libVersion() -> String? {
+        return Bundle(for: self).infoDictionary?["CFBundleShortVersionString"] as? String
     }
 }
 

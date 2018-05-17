@@ -134,7 +134,25 @@ class WADeviceInfo {
         
     }
     
+    func city() -> String {
+        var city_ = "NA"
+        if(WAUtils.init().read_pref(key: "city") != nil){
+            city_ = WAUtils.init().read_pref(key: "city");
+        }
+        
+        print("Location val city:" , city_)
+        return city_
+    }
     
+    func state() -> String {
+        var state_ = "NA"
+        if(WAUtils.init().read_pref(key: "state") != nil){
+            state_ = WAUtils.init().read_pref(key: "state");
+        }
+        
+        print("Location val city:" , state_)
+        return state_
+    }
     
     func email() -> String {
         return "example@gmail.com"
@@ -196,5 +214,5 @@ class WADeviceInfo {
         let needsConnection = flags.contains(.connectionRequired)
         return (isReachable && !needsConnection)
     }
-    
+   
 }

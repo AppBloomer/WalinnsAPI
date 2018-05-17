@@ -26,6 +26,7 @@ public class WalinnsApi : NSObject {
     
     public static func initialize(project_token : String)  {
         WAUtils.init().save_pref(key: "token", value:project_token)
+        locationIP()
         NSSetUncaughtExceptionHandler { exception in
             print("EXCEPTION CAUGHT HERE....")
             //  CrashStatus(crash_reason: String(describing: exception))
@@ -109,7 +110,55 @@ public class WalinnsApi : NSObject {
     
     public static func handleNotification(_ userInfo: [AnyHashable : Any]){
         
-        WAApiclient.init(token: WAUtils.init().read_pref(key: "token")).handlepush(userInfo)
+       // WAApiclient.init(token: WAUtils.init().read_pref(key: "token")).handlepush(userInfo)
+    }
+    
+    private static func locationIP( ){
+        let url     = URL(string: "http://ip-api.com/json")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        DispatchQueue.main.async {
+            URLSession.shared.dataTask(with: request as URLRequest, completionHandler:
+                { (data, response, error) in
+                    DispatchQueue.main.async
+                        {
+                            if let content = data
+                            {
+                                do
+                                {
+                                    if let object = try JSONSerialization.jsonObject(with: content, options: .allowFragments) as? NSDictionary
+                                    {
+                                        //completion(object, error)
+                                        print("Location val :" , object)
+                                        if let obj = object as? NSDictionary {
+ 
+                                            if(WAUtils.init().read_pref(key: "token") != nil ){
+                                  WAApiclient.init(token: WAUtils.init().read_pref(key: "token")).DeviceReq(jsonobject: obj)
+                                            }
+                                        }
+ 
+                                      }
+                                    else
+                                    {
+                                        // TODO: Create custom error.
+                                        //completion(nil, nil)
+                                        print("Location val :" , "error 1")
+                                    }
+                                }
+                                catch
+                                {
+                                    // TODO: Create custom error.
+                                    // completion(nil, nil)
+                                    print("Location val :" , "error 2")
+                                }
+                            }
+                            else
+                            {
+                                print("Location val :" , error)
+                            }
+                    }
+            }).resume()
+        }
     }
     
     
