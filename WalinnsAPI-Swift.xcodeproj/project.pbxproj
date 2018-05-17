@@ -9,10 +9,6 @@
 /* Begin PBXBuildFile section */
 		770FDC402064DEAA005013C7 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770FDC3F2064DEAA005013C7 /* UserNotifications.framework */; };
 		770FDC422064DEAA005013C7 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770FDC412064DEAA005013C7 /* UserNotificationsUI.framework */; };
-		770FDC5F20720B55005013C7 /* WAManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770FDC5E20720B55005013C7 /* WAManager.swift */; };
-		770FDC6120720BAD005013C7 /* ShortcutParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770FDC6020720BAD005013C7 /* ShortcutParser.swift */; };
-		770FDC6320720C61005013C7 /* DeeplinkParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770FDC6220720C61005013C7 /* DeeplinkParser.swift */; };
-		770FDC6520720CC1005013C7 /* DeeplinkNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770FDC6420720CC0005013C7 /* DeeplinkNavigator.swift */; };
 		7735D239203EA9D700E9EB05 /* WalinnsAPI_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7735D22F203EA9D700E9EB05 /* WalinnsAPI_Swift.framework */; };
 		7735D23E203EA9D700E9EB05 /* WalinnsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D23D203EA9D700E9EB05 /* WalinnsAPITests.swift */; };
 		7735D240203EA9D700E9EB05 /* WalinnsAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 7735D232203EA9D700E9EB05 /* WalinnsAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -42,10 +38,6 @@
 		770FDC3D2064DEAA005013C7 /* WANotificationContent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WANotificationContent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		770FDC3F2064DEAA005013C7 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		770FDC412064DEAA005013C7 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
-		770FDC5E20720B55005013C7 /* WAManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAManager.swift; sourceTree = "<group>"; };
-		770FDC6020720BAD005013C7 /* ShortcutParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutParser.swift; sourceTree = "<group>"; };
-		770FDC6220720C61005013C7 /* DeeplinkParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkParser.swift; sourceTree = "<group>"; };
-		770FDC6420720CC0005013C7 /* DeeplinkNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkNavigator.swift; sourceTree = "<group>"; };
 		7735D22F203EA9D700E9EB05 /* WalinnsAPI_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WalinnsAPI_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7735D232203EA9D700E9EB05 /* WalinnsAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WalinnsAPI.h; sourceTree = "<group>"; };
 		7735D233203EA9D700E9EB05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -148,10 +140,6 @@
 				7735D27A203FCD0E00E9EB05 /* WAConstant.swift */,
 				7735D27C203FCDA400E9EB05 /* Logger.swift */,
 				7735D27E203FCE9000E9EB05 /* Reachability.swift */,
-				770FDC5E20720B55005013C7 /* WAManager.swift */,
-				770FDC6020720BAD005013C7 /* ShortcutParser.swift */,
-				770FDC6220720C61005013C7 /* DeeplinkParser.swift */,
-				770FDC6420720CC0005013C7 /* DeeplinkNavigator.swift */,
 			);
 			path = WalinnsAPI;
 			sourceTree = "<group>";
@@ -398,13 +386,9 @@
 				7735D275203FCC8C00E9EB05 /* WalinnsApi.swift in Sources */,
 				7735D277203FCCB100E9EB05 /* WAUtils.swift in Sources */,
 				7735D271203FCC1800E9EB05 /* WADeviceInfo.swift in Sources */,
-				770FDC6320720C61005013C7 /* DeeplinkParser.swift in Sources */,
 				7735D27B203FCD0E00E9EB05 /* WAConstant.swift in Sources */,
 				7735D27F203FCE9000E9EB05 /* Reachability.swift in Sources */,
-				770FDC5F20720B55005013C7 /* WAManager.swift in Sources */,
-				770FDC6120720BAD005013C7 /* ShortcutParser.swift in Sources */,
 				7735D27D203FCDA400E9EB05 /* Logger.swift in Sources */,
-				770FDC6520720CC1005013C7 /* DeeplinkNavigator.swift in Sources */,
 				7735D279203FCCDC00E9EB05 /* WAApiclient.swift in Sources */,
 				7735D273203FCC6900E9EB05 /* ApiClient.swift in Sources */,
 			);
