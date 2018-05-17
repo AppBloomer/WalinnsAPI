@@ -14,6 +14,10 @@ class WAApiclient {
     
     var project_token : String
     var device_id = UIDevice.current.identifierForVendor!.uuidString
+    var last_name = "NA"
+    var sdk_version = "false"
+    
+    
     
     var timer: Timer!
     var sessionStartTime: TimeInterval = Date().timeIntervalSince1970
@@ -38,7 +42,8 @@ class WAApiclient {
     
     func DeviceReq(jsonobject : NSDictionary) {
         let jsonObjectt : NSMutableDictionary = NSMutableDictionary()
-        print("Location val inside:" , jsonobject)
+         
+        print("Location val inside:" , WADeviceInfo.init().getSdkVersion())
         print("Location val inside:" , jsonobject.value(forKey: "city"))
         if(jsonobject.value(forKey: "email") != nil  ){
             jsonObjectt.setValue(jsonobject.value(forKey: "gender"), forKey: "gender")
@@ -71,7 +76,8 @@ class WAApiclient {
             jsonobject.setValue("NA", forKey: "Last_name")
         }else{
             jsonObjectt.setValue("NA", forKey: "First_name")
-            jsonobject.setValue("NA", forKey: "Last_name")
+            jsonObjectt.setValue(last_name, forKey: "Last_name")
+
         }
         
          jsonObjectt.setValue(device_id, forKey: "device_id")
@@ -88,7 +94,7 @@ class WAApiclient {
          jsonObjectt.setValue(WADeviceInfo.init().screenWidth(), forKey: "screen_width")
          jsonObjectt.setValue(WADeviceInfo.init().language(), forKey: "language")
          jsonObjectt.setValue(WAUtils.init().getCurrentUtc(),forKey: "date_time")
-         jsonobject.setValue("1.0.0", forKey: "sdk_version")
+         jsonObjectt.setValue(WADeviceInfo.init().getSdkVersion(), forKey: "sdk_version")
          convertToJson(json_obj : jsonObjectt ,service_name : "devices" )
         print("WalinnsTrackerClient Device:", jsonObjectt )
 
@@ -241,8 +247,6 @@ class WAApiclient {
 //        }
 //        return nil
 //    }
-    class func libVersion() -> String? {
-        return Bundle(for: self).infoDictionary?["CFBundleShortVersionString"] as? String
-    }
+    
 }
 

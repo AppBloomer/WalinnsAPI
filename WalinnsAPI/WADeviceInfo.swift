@@ -36,6 +36,14 @@ class WADeviceInfo {
         }
         return version
     }
+    
+    func getSdkVersion() -> String {
+       guard let version = Bundle(for:WADeviceInfo.self).infoDictionary?["CFBundleShortVersionString"] as? String else {
+        return "no version info"
+    }
+     return version
+    }
+    
     func carrierName() -> String {
         // let networkInfoo = CTTelephonyNetworkInfo()
         //  let carrier = networkInfoo.subscriberCellularProvider

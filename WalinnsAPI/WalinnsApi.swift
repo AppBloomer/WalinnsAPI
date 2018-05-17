@@ -99,7 +99,7 @@ public class WalinnsApi : NSObject {
     }
     public static func sendProfile(user_profile : NSDictionary){
         print("Json object for userprofile ", user_profile)
-        WalinnsApi.sharedInstance.profile = user_profile as! NSMutableDictionary
+        WalinnsApi.sharedInstance.profile = user_profile.mutableCopy() as! NSMutableDictionary
         sharedInstance.start()
     }
     
