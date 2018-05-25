@@ -74,6 +74,22 @@ class ApiClient : NSObject{
             if( WAUtils.init().read_pref(key: "token") != nil){
                 WAApiclient.init(token: WAUtils.init().read_pref(key: "token")).appUserStatus(app_status: "yes")
                 WAUtils.init().save_pref(key : "device_status" , value:"success" )
+                if(WAUtils.init().read_pref(key: "default_event") != nil && WAUtils.init().read_pref(key: "default_event") == "success" ){
+                }else{
+                    
+                    DispatchQueue.global(qos: .background).async {
+                       
+                        
+                        DispatchQueue.main.async {
+                             print("App Install ","called")
+                            WAApiclient.init(token: WAUtils.init().read_pref(key: "token")).eventTrack(event_type: "default_event", event_name:  "App Install")
+                            
+                            WAApiclient.init(token: WAUtils.init().read_pref(key: "token")).eventTrack(event_type: "default_event", event_name:  "App Launch")
+                            WAUtils.init().save_pref(key : "default_event" , value:"success" )
+                        }
+                    }
+               
+                }
             }
             
             break

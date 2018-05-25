@@ -34,10 +34,18 @@ public class WalinnsApi : NSObject {
         sharedInstance.start()
         print("WlinnsTrackerClient" + project_token , self)
         NotificationCenter.default.addObserver(WalinnsApi.sharedInstance, selector: #selector(sharedInstance.appMovedToBackground), name: Notification.Name.UIApplicationWillResignActive, object: nil)
+        
+         NotificationCenter.default.addObserver(WalinnsApi.sharedInstance, selector: #selector(sharedInstance.appMovedToForeground), name: Notification.Name.UIApplicationDidBecomeActive, object: nil)
         WAApiclient.init(token: project_token)
         
     }
-    
+    @objc func appMovedToForeground(){
+        print("WalinnsTrackerClient foreground!" , "self.end_time")
+        if (WAUtils.init().read_pref(key: "device_status") != nil && WAUtils.init().read_pref(key: "device_status") == "success"){
+             print("App Install ","called......")
+            WAApiclient.init(token: WAUtils.init().read_pref(key: "token")).eventTrack(event_type : "default_event" ,event_name: "App Launch" )
+        }
+    }
     @objc func appMovedToBackground(){
         DispatchQueue.global(qos: .background).async {
             
