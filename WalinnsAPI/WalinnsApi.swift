@@ -44,6 +44,7 @@ public class WalinnsApi : NSObject {
         if (WAUtils.init().read_pref(key: "device_status") != nil && WAUtils.init().read_pref(key: "device_status") == "success"){
              print("App Install ","called......")
             WAApiclient.init(token: WAUtils.init().read_pref(key: "token")).eventTrack(event_type : "default_event" ,event_name: "App Launch" )
+            WAApiclient.init(token: WAUtils.init().read_pref(key: "token")).eventTrack(event_type : "default_event" ,event_name: "App Screen Viewed" )
         }
     }
     @objc func appMovedToBackground(){

@@ -11,6 +11,7 @@ import UIKit
 import CoreTelephony
 import CoreLocation
 import SystemConfiguration
+import UserNotifications
  
 class WADeviceInfo {
     static let sharedInstance = WADeviceInfo()
@@ -140,6 +141,40 @@ class WADeviceInfo {
         
         return countryCode!
         
+    }
+    
+    @available(iOS 10.0, *)
+    func notifyStatus() -> String {
+ 
+        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
+            if settings.authorizationStatus == .authorized {
+                // Notifications are allowed
+                print("push enabled or not","Notifications are allowed")
+                WAUtils.init().save_pref(key : "notify_status" , value:"true" )
+            } else {
+                // Either denied or notDetermined
+                print("push enabled or not","Either denied or notDetermined")
+                WAUtils.init().save_pref(key : "notify_status" , value:"false" )
+
+            }
+
+            }
+
+      
+//        let center = UNUserNotificationCenter.current()
+//        center.getNotificationSettings { (settings) in
+//            if(settings.authorizationStatus == .authorized)
+//            {
+//                print("Push authorized")
+//                notify_status = "true"
+//            }
+//            else
+//            {
+//                print("Push not authorized")
+//                notify_status = "false"
+//            }
+//        }
+        return WAUtils.init().read_pref(key: "notify_status")
     }
     
     func city() -> String {

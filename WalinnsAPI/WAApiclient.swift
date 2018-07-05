@@ -40,6 +40,7 @@ class WAApiclient {
         
     }
     
+    
     func DeviceReq(jsonobject : NSDictionary) {
         let jsonObjectt : NSMutableDictionary = NSMutableDictionary()
          
@@ -95,6 +96,16 @@ class WAApiclient {
          jsonObjectt.setValue(WADeviceInfo.init().language(), forKey: "language")
          jsonObjectt.setValue(WAUtils.init().getCurrentUtc(),forKey: "date_time")
          jsonObjectt.setValue(WADeviceInfo.init().getSdkVersion(), forKey: "sdk_version")
+        if #available(iOS 10.0, *) {
+            // use the feature only available in iOS 10
+            // for ex. UIStackView
+            jsonObjectt.setValue(WADeviceInfo.init().notifyStatus(), forKey: "notify_status")
+
+        } else {
+            // or use some work around
+            jsonObjectt.setValue("yes", forKey: "notify_status")
+
+        }
          convertToJson(json_obj : jsonObjectt ,service_name : "devices" )
         print("WalinnsTrackerClient Device:", jsonObjectt )
 
