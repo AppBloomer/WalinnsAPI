@@ -16,9 +16,6 @@ class WAApiclient {
     var device_id = UIDevice.current.identifierForVendor!.uuidString
     var last_name = "NA"
     var sdk_version = "false"
-    
-    
-    
     var timer: Timer!
     var sessionStartTime: TimeInterval = Date().timeIntervalSince1970
     var sessionLength: TimeInterval = 0
