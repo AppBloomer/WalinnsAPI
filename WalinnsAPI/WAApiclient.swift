@@ -118,7 +118,7 @@ class WAApiclient {
         jsonObject.setValue(event_name, forKey: "event_name")
         jsonObject.setValue(event_type, forKey: "event_type")
         jsonObject.setValue(WAUtils.init().getCurrentUtc(), forKey: "date_time")
-        print("WalinnsTrackerClient event:", jsonObject )
+        print("WalinnsTrackerClient event:", jsonObject)
         convertToJson(json_obj : jsonObject ,service_name : "events" )
         
     }
