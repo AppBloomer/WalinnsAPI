@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		770FDC402064DEAA005013C7 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770FDC3F2064DEAA005013C7 /* UserNotifications.framework */; };
 		770FDC422064DEAA005013C7 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770FDC412064DEAA005013C7 /* UserNotificationsUI.framework */; };
+		7728B87520F7333600D9933E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7728B87320F7333600D9933E /* ViewController.swift */; };
+		7728B87620F7333600D9933E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7728B87420F7333600D9933E /* ViewController.xib */; };
 		7735D239203EA9D700E9EB05 /* WalinnsAPI_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7735D22F203EA9D700E9EB05 /* WalinnsAPI_Swift.framework */; };
 		7735D23E203EA9D700E9EB05 /* WalinnsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D23D203EA9D700E9EB05 /* WalinnsAPITests.swift */; };
 		7735D240203EA9D700E9EB05 /* WalinnsAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 7735D232203EA9D700E9EB05 /* WalinnsAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -38,6 +40,8 @@
 		770FDC3D2064DEAA005013C7 /* WANotificationContent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WANotificationContent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		770FDC3F2064DEAA005013C7 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		770FDC412064DEAA005013C7 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		7728B87320F7333600D9933E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7728B87420F7333600D9933E /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		7735D22F203EA9D700E9EB05 /* WalinnsAPI_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WalinnsAPI_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7735D232203EA9D700E9EB05 /* WalinnsAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WalinnsAPI.h; sourceTree = "<group>"; };
 		7735D233203EA9D700E9EB05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,6 +109,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7728B87220F7325F00D9933E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7728B87320F7333600D9933E /* ViewController.swift */,
+				7728B87420F7333600D9933E /* ViewController.xib */,
+			);
+			name = Resources;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		7735D225203EA9D700E9EB05 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +144,7 @@
 		7735D231203EA9D700E9EB05 /* WalinnsAPI */ = {
 			isa = PBXGroup;
 			children = (
+				7728B87220F7325F00D9933E /* Resources */,
 				7735D232203EA9D700E9EB05 /* WalinnsAPI.h */,
 				7735D233203EA9D700E9EB05 /* Info.plist */,
 				7735D270203FCC1800E9EB05 /* WADeviceInfo.swift */,
@@ -345,6 +360,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7728B87620F7333600D9933E /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +402,7 @@
 				7735D275203FCC8C00E9EB05 /* WalinnsApi.swift in Sources */,
 				7735D277203FCCB100E9EB05 /* WAUtils.swift in Sources */,
 				7735D271203FCC1800E9EB05 /* WADeviceInfo.swift in Sources */,
+				7728B87520F7333600D9933E /* ViewController.swift in Sources */,
 				7735D27B203FCD0E00E9EB05 /* WAConstant.swift in Sources */,
 				7735D27F203FCE9000E9EB05 /* Reachability.swift in Sources */,
 				7735D27D203FCDA400E9EB05 /* Logger.swift in Sources */,

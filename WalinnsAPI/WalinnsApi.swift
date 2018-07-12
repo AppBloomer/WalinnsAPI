@@ -98,6 +98,7 @@ public class WalinnsApi : NSObject {
         if (WAUtils.init().read_pref(key: "device_status") != nil){
             WAApiclient.init(token: WAUtils.init().read_pref(key: "token")).screenTrack(screen_name : screen_name)
         }
+        
          
         
     }
