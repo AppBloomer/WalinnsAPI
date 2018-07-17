@@ -191,6 +191,7 @@ public class WalinnsApi : NSObject{
         if #available(iOS 10.0, *) {
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
             let request = UNNotificationRequest(identifier: "SimplifiedNotification", content: notificationcontent, trigger: trigger)
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         } else {
             // Fallback on earlier versions
         }
