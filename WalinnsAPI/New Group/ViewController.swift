@@ -1,16 +1,25 @@
 //
-//  NotificationViewController.swift
-//  Bolts
+//  ViewController.swift
+//  WalinnsAPI-Swift
 //
 //  Created by Walinns Innovation on 12/07/18.
+//  Copyright © 2018 Walinns Innovation. All rights reserved.
 //
 
 import UIKit
 
-public class NotificationViewController: BaseNotificationViewController {
+class ViewController: UIViewController {
 
-    @IBOutlet var labeltxt: UILabel!
-    @IBOutlet var imageView: UIImageView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
 
     /*

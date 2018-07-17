@@ -9,8 +9,11 @@
 import Foundation
 import UIKit
 import CoreData
+import UserNotifications
 
-public class WalinnsApi : NSObject {
+
+
+public class WalinnsApi : NSObject{
     
     //sharedInstance
     public static let sharedInstance = WalinnsApi()
@@ -33,6 +36,11 @@ public class WalinnsApi : NSObject {
         }
         sharedInstance.start()
         print("WlinnsTrackerClient" + project_token , self)
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert , .badge , .sound], completionHandler: { didAllow , Error in})
+        } else {
+            // Fallback on earlier versions
+        }
         NotificationCenter.default.addObserver(WalinnsApi.sharedInstance, selector: #selector(sharedInstance.appMovedToBackground), name: Notification.Name.UIApplicationWillResignActive, object: nil)
         
          NotificationCenter.default.addObserver(WalinnsApi.sharedInstance, selector: #selector(sharedInstance.appMovedToForeground), name: Notification.Name.UIApplicationDidBecomeActive, object: nil)
@@ -98,6 +106,14 @@ public class WalinnsApi : NSObject {
         if (WAUtils.init().read_pref(key: "device_status") != nil){
             WAApiclient.init(token: WAUtils.init().read_pref(key: "token")).screenTrack(screen_name : screen_name)
         }
+        
+//        let takeoverNotificationVC = NotificationViewController()
+//        takeoverNotificationVC.delegate = self
+//        takeoverNotificationVC.show(animated: true)
+//        self.navigationController!.pushViewController(NotificationViewController(nibName: "NotificationViewController", bundle: nil), animated: true)
+//        let modalView = NotificationViewController(frame: self.view.bounds)
+
+
        
     }
     public static func sendPushToken(push_token : String){
@@ -170,6 +186,15 @@ public class WalinnsApi : NSObject {
         }
     }
     
+    @available(iOS 10.0, *)
+    public func pushData(notificationcontent : UNMutableNotificationContent){
+        if #available(iOS 10.0, *) {
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+            let request = UNNotificationRequest(identifier: "SimplifiedNotification", content: notificationcontent, trigger: trigger)
+        } else {
+            // Fallback on earlier versions
+        }
+    }
     
 }
 

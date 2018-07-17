@@ -22,6 +22,8 @@ class WAApiclient {
     var sessionEndTime: TimeInterval = 0
     var start_time : String = WAUtils.init().getCurrentUtc()
     var end_time : String = ""
+    var device_type : String = "iPhone"
+    
     
     
     init(token :String ) {
@@ -90,9 +92,11 @@ class WAApiclient {
          jsonObjectt.setValue(WADeviceInfo.init().screendpi(), forKey: "screen_dpi")
          jsonObjectt.setValue(WADeviceInfo.init().screenHeight(), forKey: "screen_height")
          jsonObjectt.setValue(WADeviceInfo.init().screenWidth(), forKey: "screen_width")
-         jsonObjectt.setValue(WADeviceInfo.init().language(), forKey: "language")
+         jsonObjectt.setValue(WADeviceInfo.init().language(), forKey: "app_language")
          jsonObjectt.setValue(WAUtils.init().getCurrentUtc(),forKey: "date_time")
          jsonObjectt.setValue(WADeviceInfo.init().getSdkVersion(), forKey: "sdk_version")
+         jsonObjectt.setValue(WADeviceInfo.init().deviceLanguage(), forKey: "language")
+         
         if #available(iOS 10.0, *) {
             // use the feature only available in iOS 10
             // for ex. UIStackView
@@ -103,10 +107,31 @@ class WAApiclient {
             jsonObjectt.setValue("yes", forKey: "notify_status")
 
         }
+        switch UIDevice.current.userInterfaceIdiom {
+        case .pad:
+            print("Device type value","iPad")
+            device_type = "iPad"
+            jsonObjectt.setValue(device_type, forKey: "device_type")
+        case .phone:
+            print("Device type value","iPhone")
+            device_type = "iPhone"
+            jsonObjectt.setValue(device_type, forKey: "device_type")
+        case .tv:
+            print("TV")
+            device_type = "TV"
+            jsonObjectt.setValue(device_type, forKey: "device_type")
+        case .carPlay:
+            print("Device type value","carPlay")
+            device_type = "carPlay"
+            jsonObjectt.setValue(device_type, forKey: "device_type")
+        default: break;
+        }
+         jsonObjectt.setValue("Apple", forKey: "device_manufacture")
          convertToJson(json_obj : jsonObjectt ,service_name : "devices" )
         print("WalinnsTrackerClient Device:", jsonObjectt )
 
         
+       // jsonObjectt.setValue(device_type, forKey: "device_type")
     }
     
     public func eventTrack(event_type : String, event_name : String) {

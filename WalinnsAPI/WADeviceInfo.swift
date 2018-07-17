@@ -135,6 +135,13 @@ class WADeviceInfo {
         
     }
     
+    
+    
+    func deviceLanguage() -> String {
+        let pre = Locale.preferredLanguages[0]
+        return String(pre)
+    }
+    
     func location( ) -> String {
         let countryCode = NSLocale.current.regionCode
         print("Country code" , countryCode)
@@ -217,6 +224,7 @@ class WADeviceInfo {
 //            return "no model"
 //        }
         let modelName = UIDevice.modelName
+        
         return modelName
 
     }
